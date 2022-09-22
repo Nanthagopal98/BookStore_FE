@@ -13,32 +13,32 @@
             </button>
         </div>
         <div>
-            <form style="align-items: center;">
+            <form [formGroup] = "RegisterForm" (ngSubmit) = "onSubmit()" style="align-items: center;">
                 <div style="display: flex; flex-direction:column;">
                     <span>Full Name</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="FullName">
+                        <input matInput type="text" class="input-field"  formControlName="FullName" >
                         <mat-error>Enter full name</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column;">
                     <span>Email Id</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="EmailId">
+                        <input matInput  type="text" class="input-field" formControlName="EmailId">
                         <mat-error>Enter Email Id</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column;">
                     <span>Password</span>
                     <mat-form-field appearance="outline">
-                        <input type="password" class="input-field" formControlName="Password">
+                        <input matInput type="password" class="input-field" formControlName="Password">
                         <mat-error>Enter Password</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column; margin-top: 0px;">
                     <span>Phone Number</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="Mobile">
+                        <input matInput type="text" class="input-field" formControlName="Mobile">
                         <mat-error>Enter Mobile</mat-error>
                     </mat-form-field>
                 </div>
