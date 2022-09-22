@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class="main">
+    <div class="div-1">
+        <img src="../../../assets/onlineshopping.png" style="width: 250px; height: 250px; border-radius: 100%;">
+        <span class="div-1-span">ONLINE BOOK SHOPPING</span>
+    </div>
+    <mat-card class="div-2">
+        <div style="display: flex; gap:120px">
+            <button  class="buttons buttons-font" >
+                LOGIN
+            </button>
+            <button routerLink="/register" class="buttons buttons-font" style="opacity: .6;">
+                SIGNUP
+            </button>
+        </div>
+        <div>
+            <form style="align-items: center;">
+                <div style="display: flex; flex-direction:column;">
+                    <span>Email Id</span>
+                    <mat-form-field appearance="outline">
+                        <input type="text" class="input-field" formControlName="FullName">
+                        <mat-error>Enter full name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction:column; margin-top: 0px;">
+                    <span>Password</span>
+                    <mat-form-field appearance="outline">
+                        <input type="text" class="input-field" formControlName="Password">
+                        <mat-error>Enter Password</mat-error>
+                    </mat-form-field>
+                    <button class="buttons forget">Forget Password?</button>
+                </div>
+                <button class="buttons button-signup" style="margin-top: 20px;">LOGIN</button>
+            </form>
+        </div>
+        <div>
+            <span class="split"> OR </span>
+        </div>
+        <div style="display: flex; gap:5px">
+            <button  class="buttons button-footer fb" >
+                Facebook
+            </button>
+            <button class="buttons button-footer gg">
+                Google
+            </button>
+        </div>
+    </mat-card>
+
+</div>

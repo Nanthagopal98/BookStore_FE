@@ -5,7 +5,7 @@
     </div>
     <mat-card class="div-2">
         <div style="display: flex; gap:120px">
-            <button class="buttons buttons-font" style="opacity: .6;">
+            <button routerLink="/login" class="buttons buttons-font" style="opacity: .6;">
                 LOGIN
             </button>
             <button class="buttons buttons-font">
@@ -24,22 +24,22 @@
                 <div style="display: flex; flex-direction:column;">
                     <span>Email Id</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="FullName">
-                        <mat-error>Enter full name</mat-error>
+                        <input type="text" class="input-field" formControlName="EmailId">
+                        <mat-error>Enter Email Id</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column;">
                     <span>Password</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="FullName">
-                        <mat-error>Enter full name</mat-error>
+                        <input type="password" class="input-field" formControlName="Password">
+                        <mat-error>Enter Password</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column; margin-top: 0px;">
                     <span>Phone Number</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="FullName">
-                        <mat-error>Enter full name</mat-error>
+                        <input type="text" class="input-field" formControlName="Mobile">
+                        <mat-error>Enter Mobile</mat-error>
                     </mat-form-field>
                 </div>
                 <button class="buttons button-signup" >SIGNUP</button>
