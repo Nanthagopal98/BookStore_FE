@@ -13,18 +13,18 @@
             </button>
         </div>
         <div>
-            <form style="align-items: center;">
+            <form [formGroup] = "loginForm" (ngSubmit) = "onSubmit()" style="align-items: center;">
                 <div style="display: flex; flex-direction:column;">
                     <span>Email Id</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="FullName">
+                        <input matInput type="text" class="input-field" formControlName="email">
                         <mat-error>Enter full name</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column; margin-top: 0px;">
                     <span>Password</span>
                     <mat-form-field appearance="outline">
-                        <input type="text" class="input-field" formControlName="Password">
+                        <input matInput type="text" class="input-field" formControlName="password">
                         <mat-error>Enter Password</mat-error>
                     </mat-form-field>
                     <button class="buttons forget">Forget Password?</button>
