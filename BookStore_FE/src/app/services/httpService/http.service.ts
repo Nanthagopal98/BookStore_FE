@@ -12,4 +12,8 @@ export class HttpService {
   postService(url : string, reqData : any, token : boolean = false, httpOptions:any ={}) {
     return this.httpclient.post(this.baseurl+url, reqData, token && httpOptions);
   }
+
+  postAuthorised(url : string, reqData : any, token : boolean = true, httpOptions:any ={}){
+    return this.httpclient.post(this.baseurl+url, reqData, token && httpOptions);
+  }
 }

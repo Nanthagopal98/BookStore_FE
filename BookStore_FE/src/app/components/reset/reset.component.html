@@ -1,1 +1,29 @@
-<p>reset works!</p>
+<div class="main">
+    <div class="div-1">
+        <img src="../../../assets/education.svg">
+        <span class="header-font">Bookstore</span>
+    </div>
+    <div class="div-2">
+        <span style="font-size: 20px;">Forgot Your Password?</span>
+        <form [formGroup]="resetForm" (ngSubmit)="onSubmit()" class="formclass">
+            <span style="opacity: .6;">Enter Password And Confirm Password to reset your password</span>
+            <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                <span>Password</span>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" class="input-field" formControlName="password">
+                    <mat-error>Enter Password</mat-error>
+                </mat-form-field>
+            </div>
+            <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                <span>Confirm Password</span>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" class="input-field" formControlName="confirmPassword">
+                    <mat-error>Enter Confirm Password</mat-error>
+                </mat-form-field>
+            </div>
+            <button class="buttons button-signup" style="margin-top: 20px;">Reset</button>
+            
+        </form>
+        <!-- <button class="buttons ca">CREATE ACCOUNT</button> -->
+        
+</div>
