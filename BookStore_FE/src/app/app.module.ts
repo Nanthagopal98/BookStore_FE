@@ -28,7 +28,7 @@ import { GetBooksComponent } from './components/get-books/get-books.component';
     ForgotComponent,
     ResetComponent,
     HomeComponent,
-    GetBooksComponent
+    GetBooksComponent,
   ],
   imports: [
     BrowserModule,
