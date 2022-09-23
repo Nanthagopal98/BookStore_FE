@@ -18,6 +18,7 @@ import { ResetComponent } from './components/reset/reset.component';
 import { HomeComponent } from './components/home/home.component';
 
 import {MatMenuModule} from '@angular/material/menu';
+import { GetBooksComponent } from './components/get-books/get-books.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatMenuModule} from '@angular/material/menu';
     LoginComponent,
     ForgotComponent,
     ResetComponent,
-    HomeComponent
+    HomeComponent,
+    GetBooksComponent
   ],
   imports: [
     BrowserModule,
