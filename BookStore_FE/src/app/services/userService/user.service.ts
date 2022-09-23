@@ -29,4 +29,13 @@ export class UserService {
     return this.httpServise.postService('User/Login',reqData,false && header);
   }
 
+  forgot(reqData :any){
+    let header = {
+      headers : new HttpHeaders({
+        'Content-type':'application/json',
+    })
+  }
+  return this.httpServise.postService('User/Forget?email='+ reqData.email, {}, false && header);
+  }
+
 }

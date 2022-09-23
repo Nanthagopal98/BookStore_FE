@@ -18,7 +18,7 @@
                     <span>Email Id</span>
                     <mat-form-field appearance="outline">
                         <input matInput type="text" class="input-field" formControlName="email">
-                        <mat-error>Enter full name</mat-error>
+                        <mat-error>Enter Email</mat-error>
                     </mat-form-field>
                 </div>
                 <div style="display: flex; flex-direction:column; margin-top: 0px;">
@@ -27,7 +27,7 @@
                         <input matInput type="text" class="input-field" formControlName="password">
                         <mat-error>Enter Password</mat-error>
                     </mat-form-field>
-                    <button class="buttons forget">Forget Password?</button>
+                    <button class="buttons forget" routerLink="/forgot">Forget Password?</button>
                 </div>
                 <button class="buttons button-signup" style="margin-top: 20px;">LOGIN</button>
             </form>
