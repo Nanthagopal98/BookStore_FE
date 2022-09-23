@@ -1,0 +1,33 @@
+<div>
+    <div class="div-1">
+        <div class="div-1-1">
+            <img src="../../../assets/education.svg">
+            <span class="header-font">Bookstore</span>
+            <div class="search">
+                <img src="../../../assets/search_icon.svg">
+                <input class="search-input" type="text" placeholder="Search...">
+            </div>
+            <div class="rh-icon">
+                <button class="header-button" style="margin-left: 100px;">
+                    <img class="fill" [matMenuTriggerFor]="moreMenu" src="../../../assets/person.svg"
+                        style="height: 25px; width : 25px;  ">
+                    <span style="color: white; font-size:10px;">Profile</span>
+                </button>
+                <button class="header-button">
+                    <img class="fill" src="../../../assets/home-cart.svg" style="height: 25px; width : 25px; ">
+                    <span style="color: white; font-size:10px;">Cart</span>
+                </button>
+            </div>
+            <mat-menu #moreMenu="matMenu" xPosition="before">
+                <div style="display: flex; flex-direction:column; padding: 10px 10px;">
+                    <span style="font-weight: 550;">Welcome</span>
+                    <span style="opacity: .5; margin-top:5px">To access account and manage order</span>
+                </div>
+                <button mat-menu-item class="mat-menu" routerLink="/login">LOGIN/SIGNUP</button>
+                <button mat-menu-item>My orders</button>
+                <button mat-menu-item>Wishlist</button>
+            </mat-menu>
+        </div>
+    </div>
+    
+</div>

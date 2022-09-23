@@ -15,6 +15,9 @@ import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import { ResetComponent } from './components/reset/reset.component';
+import { HomeComponent } from './components/home/home.component';
+
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { ResetComponent } from './components/reset/reset.component';
     RegisterComponent,
     LoginComponent,
     ForgotComponent,
-    ResetComponent
+    ResetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { ResetComponent } from './components/reset/reset.component';
     MatCardModule,
     ReactiveFormsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
