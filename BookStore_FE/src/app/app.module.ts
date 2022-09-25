@@ -19,6 +19,9 @@ import { HomeComponent } from './components/home/home.component';
 
 import {MatMenuModule} from '@angular/material/menu';
 import { GetBooksComponent } from './components/get-books/get-books.component';
+import { QuickViewComponent } from './components/quick-view/quick-view.component';
+
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { GetBooksComponent } from './components/get-books/get-books.component';
     ResetComponent,
     HomeComponent,
     GetBooksComponent,
+    QuickViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { GetBooksComponent } from './components/get-books/get-books.component';
     ReactiveFormsModule,
     MatInputModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

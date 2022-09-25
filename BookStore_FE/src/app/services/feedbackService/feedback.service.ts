@@ -5,28 +5,27 @@ import { HttpService } from '../httpService/http.service';
 @Injectable({
   providedIn: 'root'
 })
-export class BookService {
-token = localStorage.getItem('token');
-  constructor(private httpService : HttpService) { }
+export class FeedbackService {
+token = localStorage.getItem('token')
+  constructor(private httpService :HttpService) { }
 
-  getallbooks(){
+  addFeedback(reqData : any){
     let header = {
       headers : new HttpHeaders({
         'Content-type':'application/json',
         'Authorization':'Bearer '+this.token
       })
     }
-    console.log(this.token);
-    return this.httpService.getService('Book/GetAllBooks',true, header);
+    return this.httpService.postAuthorised('FeedBack/AddFeedBack', reqData, true, header);
   }
 
-  getBookById(bookId:any){
+  getFeedback(){
     let header = {
-      headers : new HttpHeaders ({
+      headers : new HttpHeaders({
         'Content-type':'application/json',
         'Authorization':'Bearer '+this.token
       })
     }
-    return this.httpService.getService('Book/GetBookById?bookId='+bookId, true, header);
+    return this.httpService.getService('FeedBack/GetAllFeedback', true, header);
   }
 }

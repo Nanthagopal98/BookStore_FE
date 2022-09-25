@@ -3,7 +3,7 @@
         <span style=" font-weight:500; font-size: 20px; margin-right: 5px;">Books</span>
         <span>({{totalBooks}} items)</span>
     </div>
-    <div class="bookContainer" *ngFor="let books of bookList">
+    <div class="bookContainer" *ngFor="let books of bookList" (click)="quickView(books)">
         <div class="books" >
             <div class="images">
                 <img class="bookImg" src="{{books.bookImage}}">
