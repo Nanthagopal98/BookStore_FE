@@ -20,4 +20,8 @@ export class HttpService {
   getService(url : string, token : boolean = true , httpOptions : any = {}){
     return this.httpclient.get(this.baseurl+url,token && httpOptions);
   }
+
+  remove(url : string, token : boolean = true , httpOptions : any = {}){
+    return this.httpclient.delete(this.baseurl+url,token && httpOptions);
+  }
 }

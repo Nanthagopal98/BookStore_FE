@@ -1,0 +1,48 @@
+.div-2{
+    width: 1000px;
+    border: 0px solid black;
+    margin: auto;
+    margin-top: 25px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 700px;
+    border: 1px solid #707070;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.cartContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+.location{
+    display: flex ; 
+    align-items: center;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    padding: 3px 5px;
+}
+.bookDetails{
+    display: flex;
+    flex-direction: column;
+    gap:5px; 
+}
+.buttons{
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    cursor: pointer;
+}
+.button-1{
+    background: #3371B5;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
