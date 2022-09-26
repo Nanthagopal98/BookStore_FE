@@ -21,7 +21,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { GetBooksComponent } from './components/get-books/get-books.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
 
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart.component'; 
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     GetBooksComponent,
     QuickViewComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

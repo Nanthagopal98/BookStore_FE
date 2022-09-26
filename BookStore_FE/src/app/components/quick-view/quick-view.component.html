@@ -8,10 +8,10 @@
         <div class="bookImg">
             <img style="width: 200px; height: 260px; padding: 20px;" src="{{getBookById.bookImage}}">
             <div style="margin-top: 20px; display: flex;flex-direction: row; justify-content: space-around;">
-                <button class="cartbuttons" style="background: #A03037;">
+                <button (click)="addToCart()" class="cartbuttons" style="background: #A03037; color: #FCFCFC;">
                     ADD TO BAG
                 </button>
-                <button class="cartbuttons" style="background : #333333">
+                <button class="cartbuttons" style="background : #333333; color: #FCFCFC;">
                     WISHLIST
                 </button>
             </div>

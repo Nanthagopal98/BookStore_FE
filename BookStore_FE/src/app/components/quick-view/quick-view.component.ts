@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from 'src/app/services/bookService/book.service';
 import { FeedbackService } from 'src/app/services/feedbackService/feedback.service';
+import { CartService } from 'src/app/services/cartService/cart.service';
 
 @Component({
   selector: 'app-quick-view',
@@ -14,7 +15,7 @@ export class QuickViewComponent implements OnInit {
   review: any;
   star: any;
   feedbackList : any;
-  constructor(private getBook: BookService, private feedback : FeedbackService) { }
+  constructor(private getBook: BookService, private feedback : FeedbackService, private cart : CartService) { }
 
   ngOnInit(): void {
     this.getbook()
@@ -26,7 +27,6 @@ export class QuickViewComponent implements OnInit {
       this.qty = response.length;
       console.log(this.bookId)
       console.log(this.getBookById);
-      console.log(this.qty);
     })
   }
   onsubmit() {
@@ -63,6 +63,16 @@ export class QuickViewComponent implements OnInit {
     this.feedback.getFeedback().subscribe((response : any) => {
       console.log(response);
       this.feedbackList = response.data
+    })
+  }
+
+  addToCart(){
+    let reqData = {
+      bookId : this.getBookById.bookId,
+      quantity : 1
+    }
+    this.cart.addToCart(reqData).subscribe((response :any) =>{
+      console.log(response)
     })
   }
 }
