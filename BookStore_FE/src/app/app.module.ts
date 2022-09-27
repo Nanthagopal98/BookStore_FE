@@ -22,7 +22,8 @@ import { GetBooksComponent } from './components/get-books/get-books.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
 
 import { FormsModule } from '@angular/forms';
-import { CartComponent } from './components/cart/cart.component'; 
+import { CartComponent } from './components/cart/cart.component';
+import { WishListComponent } from './components/wish-list/wish-list.component'; 
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CartComponent } from './components/cart/cart.component';
     GetBooksComponent,
     QuickViewComponent,
     CartComponent,
+    WishListComponent,
   ],
   imports: [
     BrowserModule,
