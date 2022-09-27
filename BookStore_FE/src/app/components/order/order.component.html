@@ -1,0 +1,27 @@
+<div class="div-2">
+    <div>
+        <span routerLink="/home"
+            style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / </span>
+        <span>My Order </span>
+    </div>
+    <div class="container">
+        <div class="cartContainer">
+            <label>My Order ({{qty}})</label>
+        </div>
+        <div>
+            <div style="display: flex; flex-direction : row; padding: 10px; border: 1px solid grey;"
+                *ngFor='let books of getOrderBooks'>
+                <img style="width: 100px; height:140px;" src="{{books.bookImage}}">
+                <div class="bookDetails">
+                    <label style="font-size: 15px;">{{books.bookName}}</label>
+                    <label style="opacity: .6;">by {{books.authorName}}</label>
+                    <div style="display: flex; gap:7px;">
+                        <span>Rs. {{books.discountPrice}}</span>
+                        <span style="opacity: .6; font-size:11px; text-decoration: line-through;">Rs.
+                            {{books.actualPrice}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
