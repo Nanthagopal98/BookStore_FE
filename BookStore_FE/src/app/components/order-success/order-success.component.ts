@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from 'src/app/services/orderService/order.service';
 
 @Component({
   selector: 'app-order-success',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-success.component.scss']
 })
 export class OrderSuccessComponent implements OnInit {
-
-  constructor() { }
+  adminList: any;
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+    this.getAdmin()
+  }
+  getAdmin() {
+    this.orderService.getAdminService().subscribe((response: any) => {
+      console.log(response.data)
+      this.adminList = response.data
+    })
   }
 
 }

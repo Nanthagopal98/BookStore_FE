@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.info{
+    width: 700px;
+    border: 1px solid #DCDCDC;
+    margin-top: 50px;
+}
+.header{
+    height: 40px;
+    border-bottom: 1px solid #DCDCDC;
+    display: flex;
+}
+.tabel{
+    width: 200px;
+    border-right:1px solid #DCDCDC;
+    text-align: center;
+    align-self: center;
+}
+.tabel1{
+    width: 300px;
+    text-align: center;
+    align-self: center;
+}
+.header-1{
+    width: 200px;
+    text-align: center;
+    align-self: center;
+}
+.header-2{
+    width: 300px;
+    text-align: center;
+    align-self: center;
+}
+.button{
+    border: 0px solid black;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #3371B5;
+    margin-top: 40px;
+    color: white;
+    cursor: pointer;
+}

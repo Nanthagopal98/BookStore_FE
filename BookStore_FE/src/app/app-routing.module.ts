@@ -25,7 +25,7 @@ const routes: Routes = [
     { path : 'quickView', component:QuickViewComponent},
     { path : 'cart', component:CartComponent},
     { path : 'wishlist', component:WishListComponent},
-    { path : 'order', component : CartComponent },
+    { path : 'order', component : OrderComponent },
     { path : 'ordersummary', component : OrderSummaryComponent},
     { path : 'ordersuccess', component : OrderSuccessComponent}
   ]

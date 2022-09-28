@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BookService } from 'src/app/services/bookService/book.service';
 import { OrderService } from 'src/app/services/orderService/order.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-summary',
@@ -9,7 +10,7 @@ import { OrderService } from 'src/app/services/orderService/order.service';
 })
 export class OrderSummaryComponent implements OnInit {
 
-  constructor(private bookService: BookService, private orderService : OrderService) { }
+  constructor(private bookService: BookService, private orderService : OrderService, private route : Router) { }
   bookId = localStorage.getItem('orderedBook');
   cartIdInfo =JSON.parse(localStorage.getItem('orderedCart')!)
   books: any
@@ -45,6 +46,7 @@ export class OrderSummaryComponent implements OnInit {
     this.orderService.placeOrder(reqData).subscribe((response : any) =>{
       console.log(response)
     })
+    this.route.navigateByUrl('/home/ordersuccess')
   }
 } 
   

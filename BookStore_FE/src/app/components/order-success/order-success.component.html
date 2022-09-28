@@ -1,5 +1,32 @@
-<div>
+<div class="main">
     <div>
-        <img src="../../../assets/order-Success.JPG"> 
+        <img style="width: 300px; height:250px" src="../../../assets/order-Success.JPG">
     </div>
+    <label style="width:400px; font-size: 20px;font-weight: 550; text-align: -webkit-center;">hurray!!! your order is
+        confirmed the order id is #123456 save the order id for further communication..</label>
+    <div class="info">
+        <div class="header">
+            <div class="header-1">
+                <label>Email us</label>
+            </div>
+            <div class="header-1">
+                <label>Contact us</label>
+            </div>
+            <div class="header-2">
+                <label>Address</label>
+            </div>
+        </div>
+        <div style="display: flex; height: fit-content;">
+            <div class="tabel">
+                <label >{{adminList.adminEmailID}}</label>
+            </div>
+            <div class="tabel">
+                <label >{{adminList.adminPhone}}</label>
+            </div>
+            <div class="tabel1">
+                <label >{{adminList.address}}</label>
+            </div>
+        </div>
+    </div>
+    <button class="button" routerLink="/home">Continue Shopping</button>
 </div>

@@ -38,4 +38,13 @@ export class OrderService {
     }
     return this.httpService.postAuthorised('Order/PlaceOrder', reqData, true, header);
   }
+
+  getAdminService(){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+      })
+    }
+    return this.httpService.getServiceAdmin('Admin/getAdmin', false, header);
+  }
 }
