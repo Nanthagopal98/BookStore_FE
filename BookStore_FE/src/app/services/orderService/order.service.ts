@@ -6,16 +6,36 @@ import { HttpService } from '../httpService/http.service';
   providedIn: 'root'
 })
 export class OrderService {
-token = localStorage.getItem('token')
-  constructor(private httpService : HttpService) { }
+  token = localStorage.getItem('token')
+  constructor(private httpService: HttpService) { }
 
-  getOrder(){
+  getOrder() {
     let header = {
-      headers : new HttpHeaders({
-        'Content-type':'application/json',
-        'Authorization':'Bearer '+this.token
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
       })
     }
     return this.httpService.getService('Order/getOrder', true, header);
+  }
+
+  getAddressService() {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpService.getService('Address/GetAddress', true, header);
+  }
+
+  placeOrder(reqData: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpService.postAuthorised('Order/PlaceOrder', reqData, true, header);
   }
 }

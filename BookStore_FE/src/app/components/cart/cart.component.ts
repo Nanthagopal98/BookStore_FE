@@ -3,6 +3,7 @@ import { CartService } from 'src/app/services/cartService/cart.service';
 import { BookService } from 'src/app/services/bookService/book.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -14,6 +15,8 @@ export class CartComponent implements OnInit {
   cartBooks = new Array();
   qty : any
   orderQty = 1
+  filter : any
+  sendData : any
   constructor(private cart: CartService, private getBooks: BookService, private route : Router) { }
 
   ngOnInit(): void {
@@ -56,4 +59,15 @@ export class CartComponent implements OnInit {
     })
     
   }
+  shareToOrder(bookId : any){
+    this.filter =  this.cartItems.filter((obj: any) => { return obj.bookId == bookId});
+    
+    this.sendData = this.filter[0]
+    console.log(this.sendData)
+    localStorage.setItem('orderedBook', this.sendData.bookId)
+    localStorage.setItem('orderedCart', this.sendData.cartId)
+    this.route.navigateByUrl('/home/ordersummary')
+  }
 }
+
+

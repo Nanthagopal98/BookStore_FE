@@ -5,6 +5,8 @@ import { ForgotComponent } from './components/forgot/forgot.component';
 import { GetBooksComponent } from './components/get-books/get-books.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 import { OrderComponent } from './components/order/order.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -23,7 +25,9 @@ const routes: Routes = [
     { path : 'quickView', component:QuickViewComponent},
     { path : 'cart', component:CartComponent},
     { path : 'wishlist', component:WishListComponent},
-    { path : 'order', component : OrderComponent}
+    { path : 'order', component : CartComponent },
+    { path : 'ordersummary', component : OrderSummaryComponent},
+    { path : 'ordersuccess', component : OrderSuccessComponent}
   ]
 }
   

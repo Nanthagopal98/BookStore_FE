@@ -1,0 +1,39 @@
+<div class="div-2">
+    <div>
+        <span routerLink="/home"
+            style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / </span>
+        <span>My Order </span>
+    </div>
+    <div class="container">
+        <div class="cartContainer">
+            <label>My Order</label>
+        </div>
+        <div style="display: flex; flex-direction : row; gap:20px; margin-bottom: 20px;">
+            <img style="width: 100px; height:140px;" src="{{books.bookImage}}">
+            <div class="bookDetails">
+                <label style="font-size: 15px;">{{books.bookName}}</label>
+                <label style="opacity: .6;">by {{books.authorName}}</label>
+                <div style="display: flex; gap:7px;">
+                    <span>Rs. {{books.discountPrice}}</span>
+                    <span style="opacity: .6; font-size:11px; text-decoration: line-through;">Rs.
+                        {{books.actualPrice}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cartContainer">
+            <label>Address Details</label>
+            <div *ngFor='let add of address'>
+                <label for="{{add.addressId}}">
+                    <input type="radio"  [(ngModel)]="selectedValue"  [value]="add.addressId">Address {{add.addressId}},{{add.address}},{{add.city}},{{add.state}}
+                </label>
+            </div>
+            <div style="display: flex; gap:400px; margin: 10px;">
+                <button class="button-1" (click)="order()" >
+                    Placeorder
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

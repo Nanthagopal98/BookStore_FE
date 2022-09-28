@@ -33,17 +33,17 @@
                     <button class="button-1" (click)="removeCart(books.bookId)">
                         Remove
                     </button>
-                    <button class="button-1">
+                    <button class="button-1" (click)="shareToOrder(books.bookId)" >
                         Placeorder
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="container">
         <div class="cartContainer">
             <label>Address Details</label>
+            
         </div>
     </div>
     <div class="container">
@@ -52,3 +52,4 @@
         </div>
     </div>
 </div>
+
