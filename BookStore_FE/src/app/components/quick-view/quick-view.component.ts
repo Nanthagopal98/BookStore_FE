@@ -15,6 +15,7 @@ export class QuickViewComponent implements OnInit {
   review: any;
   star: any;
   feedbackList : any;
+  currentRate = 0; 
   constructor(private getBook: BookService, private feedback : FeedbackService, private cart : CartService) { }
 
   ngOnInit(): void {
@@ -31,33 +32,14 @@ export class QuickViewComponent implements OnInit {
   }
   onsubmit() {
     let reqData = {
-      rating: this.star,
+      rating: this.currentRate,
       comment: this.review,
       bookId: this.getBookById.bookId
     }
+    console.log(this.currentRate)
     this.feedback.addFeedback(reqData).subscribe((response : any) =>{
       console.log(response);
     })
-  }
-  rating1() {
-    this.star = 1
-    console.log(this.star)
-  }
-  rating2() {
-    this.star = 2
-    console.log(this.star)
-  }
-  rating3() {
-    this.star = 3
-    console.log(this.star)
-  }
-  rating4() {
-    this.star = 4
-    console.log(this.star)
-  }
-  rating5() {
-    this.star = 5
-    console.log(this.star)
   }
   getFeedback(){
     this.feedback.getFeedback().subscribe((response : any) => {
@@ -65,7 +47,6 @@ export class QuickViewComponent implements OnInit {
       this.feedbackList = response.data
     })
   }
-
   addToCart(){
     let reqData = {
       bookId : this.getBookById.bookId,

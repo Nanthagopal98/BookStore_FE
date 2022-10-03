@@ -26,7 +26,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
-import { OrderSuccessComponent } from './components/order-success/order-success.component'; 
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { OrderSuccessComponent } from './components/order-success/order-success.
     MatInputModule,
     HttpClientModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

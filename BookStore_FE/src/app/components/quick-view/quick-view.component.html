@@ -22,6 +22,7 @@
             <div style="display: flex; gap:10px">
                 <div class="rating">
                     <span style="color: white;">{{getBookById.rating}}</span>
+                    
                     <img style="height: 10px; width:10px;" src="../../../assets/star_rate.svg">
                 </div>
                 <span style="opacity:.6;">({{getBookById.totalRating}})</span>
@@ -42,22 +43,8 @@
                 <p style="font-size: 18px;">Customer Feedback</p>
                 <div class="form">
                     <label>Overall rating</label>
-                    <div style="padding-top: 5px;">
-                        <button class="buttons" (click)="rating1()">
-                            <img src="../../../assets/icons8-star-32.png">
-                        </button>
-                        <button class="buttons" (click)="rating2()">
-                            <img src="../../../assets/icons8-star-32.png">
-                        </button>
-                        <button class="buttons" (click)="rating3()">
-                            <img src="../../../assets/icons8-star-32.png">
-                        </button>
-                        <button class="buttons" (click)="rating4()">
-                            <img src="../../../assets/icons8-star-32.png">
-                        </button>
-                        <button class="buttons" (click)="rating5()">
-                            <img src="../../../assets/icons8-star-32.png">
-                        </button>
+                    <div style="padding: 10px;">
+                        <ngb-rating class="star" [max]="5" [(rate)]="currentRate" [readonly]="false"></ngb-rating>
                     </div>
                     <textarea matInput [(ngModel)]="review" style="padding-top:10px; border: none; outline: none;"
                         placeholder="Write your review"></textarea>
