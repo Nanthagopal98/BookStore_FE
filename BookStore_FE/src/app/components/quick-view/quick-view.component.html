@@ -2,12 +2,12 @@
     <div>
         <span routerLink="/home"
             style=" cursor: pointer; font-weight:500; font-size: 15px; margin-right: 5px; opacity: .5;">Home / </span>
-        <span>Book ({{qty}})</span>
+        <span>Book</span>
     </div>
     <div class="quickView">
         <div class="bookImg">
             <img style="width: 200px; height: 260px; padding: 20px;" src={{getBookById.bookImage}}>
-            <div style="margin-top: 20px; display: flex;flex-direction: row; justify-content: space-around;">
+            <div style="margin-top: 0px; display: flex;flex-direction: row; justify-content: space-around;">
                 <button (click)="addToCart()" class="cartbuttons" style="background: #A03037; color: #FCFCFC;">
                     ADD TO BAG
                 </button>
@@ -50,6 +50,14 @@
                         placeholder="Write your review"></textarea>
                     <button class="submitButton" (click)="onsubmit()">Submit</button>
                 </div>
+                <label style="margin-top: 25px;font-weight:550; font-size:20px">Reviews</label>
+            </div>
+            <div *ngFor = 'let getrating of feedbackList' style="border-bottom: 1px solid black;">
+                <label>{{getrating.userName}}</label>
+                <div style="padding: 10px;">
+                    <ngb-rating class="star" [max]="5" [(rate)]="getrating.rating" [readonly]="true"></ngb-rating>
+                </div>
+                <label >{{getrating.comment}}</label>
             </div>
         </div>
     </div>

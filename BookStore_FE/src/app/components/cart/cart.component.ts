@@ -41,12 +41,13 @@ export class CartComponent implements OnInit {
     console.log(this.cartBooks); 
   }
   
-  reduce(){
+  reduce(bookId : any){
     if(this.orderQty > 1){
       this.orderQty = this.orderQty-1
     }
+    
   }
-  increase(){
+  increase(bookId : any){
     if(this.orderQty > 0){
       this.orderQty = this.orderQty+1
     }

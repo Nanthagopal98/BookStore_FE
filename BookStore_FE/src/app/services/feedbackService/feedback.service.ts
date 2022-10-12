@@ -19,13 +19,13 @@ token = localStorage.getItem('token')
     return this.httpService.postAuthorised('FeedBack/AddFeedBack', reqData, true, header);
   }
 
-  getFeedback(){
+  getFeedback(bookId : any){
     let header = {
       headers : new HttpHeaders({
         'Content-type':'application/json',
         'Authorization':'Bearer '+this.token
       })
     }
-    return this.httpService.getService('FeedBack/GetAllFeedback', true, header);
+    return this.httpService.getFeedbackService('FeedBack/GetAllFeedback?bookId='+bookId, true, header);
   }
 }

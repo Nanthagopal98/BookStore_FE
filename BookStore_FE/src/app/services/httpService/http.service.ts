@@ -28,4 +28,8 @@ export class HttpService {
   getServiceAdmin(url : string, token : boolean = false , httpOptions : any = {}){
     return this.httpclient.get(this.baseurl+url,token && httpOptions);
   }
+
+  getFeedbackService(url : string, token : boolean = true , httpOptions : any = {}){
+    return this.httpclient.get(this.baseurl+url ,token && httpOptions);
+  }
 }

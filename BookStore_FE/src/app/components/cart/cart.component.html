@@ -24,12 +24,12 @@
                     <span style="opacity: .6; font-size:11px; text-decoration: line-through;">Rs.
                         {{books.actualPrice}}</span>
                 </div>
-                <div style="display:flex; gap:10px;">
-                    <button class="buttons" (click)="reduce()">-</button>
+                <div style="display:flex; gap:10px;" >
+                    <button class="buttons" (click)="reduce(books.bookId)">-</button>
                     <label>{{orderQty}}</label>
-                    <button class="buttons" (click)="increase()">+</button>
+                    <button class="buttons" (click)="increase(books.bookId)">+</button>
                 </div>
-                <div style="display: flex; gap:400px; margin: 10px;">
+                <div style="display: flex; gap:350px; margin: 10px;">
                     <button class="button-1" (click)="removeCart(books.bookId)">
                         Remove
                     </button>

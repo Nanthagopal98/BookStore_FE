@@ -42,9 +42,10 @@ export class QuickViewComponent implements OnInit {
     })
   }
   getFeedback(){
-    this.feedback.getFeedback().subscribe((response : any) => {
+    this.feedback.getFeedback(this.bookId).subscribe((response : any) => {
       console.log(response);
       this.feedbackList = response.data
+      console.log(this.feedbackList)
     })
   }
   addToCart(){

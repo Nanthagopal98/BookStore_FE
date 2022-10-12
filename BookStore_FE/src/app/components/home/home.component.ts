@@ -15,6 +15,10 @@ export class HomeComponent implements OnDestroy {
   }
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('cartId');
+    localStorage.removeItem('orderedCart');
+    localStorage.removeItem('orderedBook');
+    localStorage.removeItem('bookId');
     this.router.navigateByUrl('/login');
   }
 
